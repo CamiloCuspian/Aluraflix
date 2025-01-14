@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, useRoutes } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { Home } from '../Home'
 import { Header } from '../../components/Header';
 import './App.css'
@@ -10,35 +10,19 @@ import { Video } from '../Video';
 import { NotFound } from '../NotFound';
 import { SuccesfulVideo } from '../SuccessfulVideo';
 
-
-const AppRoutes = () => {
-
-  const routes = useRoutes([
-    { path: '/', element: <Home /> },
-    { path: '/nuevo-video', element: <NewVideo /> },
-    { path: '/:id', element: <Video /> },
-    { path: '/success', element: <SuccesfulVideo /> },
-    { path: '*', element: <NotFound /> },
-  ])
-
-  return (
-    routes
-  )
-};
-
-
 const App = () => {
-
   return (
-    <>
-      <MultimediaContextProvider>
-        <BrowserRouter>
-          <Header />
-          <AppRoutes />
-          <Footer />
-        </BrowserRouter>
-      </MultimediaContextProvider>
-    </>
+    <MultimediaContextProvider>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/nuevo-video" element={<NewVideo />} />
+        <Route path="/:id" element={<Video />} />
+        <Route path="/success" element={<SuccesfulVideo />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+      <Footer />
+    </MultimediaContextProvider>
   )
 }
 

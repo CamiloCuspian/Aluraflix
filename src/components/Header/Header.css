@@ -3,16 +3,18 @@
     box-sizing: border-box;
     width: 100%;
     height: 48px;
-    padding:40px 48px;
-    border-bottom: 2px solid var(--blue);
+    padding: 40px 48px;
+    border-bottom: 2px solid var(--primary-blue); /* Cambiado a azul corporativo */
     justify-content: space-between;
     align-items: center;
 }
+
 .header_container a {
     text-decoration: none;
 }
+
 .header_container p {
-    color: var(--blue);
+    color: var(--accent-blue); /* Cambiado a azul brillante */
     font-weight: 900;
     font-size: 28px;
 }
@@ -25,10 +27,12 @@
     list-style: none;
     text-decoration: none;
 }
+
 .li {
     padding: 8px 16px;
     width: "120px";
 }
+
 .tabBar {
     display: none;
     justify-content: space-evenly;
@@ -38,22 +42,34 @@
     right: 0;
     left: 0;
     height: 76px;
-    background-color: var(--dark);
-    color: var(--light-blue);
+    background-color: var(--dark-bg); /* Cambiado a azul oscuro para fondos */
+    color: var(--neon-blue); /* Cambiado a azul neón */
     box-sizing: border-box;
-    border-top: 2px solid var(--light-blue);
+    border-top: 2px solid var(--accent-blue); /* Cambiado a azul brillante */
 }
+
 .tabBar svg {
-    color: var(--light-blue);
+    color: var(--neon-blue); /* Cambiado a azul neón */
     width: 40px;
     height: 40px;
 }
+
+.tabBar svg:hover { /* Añadido efecto hover */
+    color: var(--accent-blue);
+    cursor: pointer;
+}
+
 .new_video_icon {
     display: flex;
-    color: var(--light-blue);
+    color: var(--neon-blue); /* Cambiado a azul neón */
     justify-content: center;
     align-items: center;
     gap: 16px;
+}
+
+.new_video_icon:hover { /* Añadido efecto hover */
+    color: var(--accent-blue);
+    cursor: pointer;
 }
 
 @media (width < 630px) {

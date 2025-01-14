@@ -1,14 +1,17 @@
 :root {
-    --dark: #121212;
-    --blue: #3082E6;
-    --light-blue: #227AE6;
-    --dark-blue: #03122F;
-    --white: #ededed;
+    --primary-blue: #0B43A4;      /* Azul profundo corporativo */
+    --accent-blue: #00C2FF;       /* Azul brillante para acentos/hover */
+    --neon-blue: #4CC9FF;         /* Azul neón para elementos destacados */
+    --dark-bg: #0A1929;           /* Azul oscuro para fondos */
+    --light-text: #E6F1FF;        /* Texto claro con toque azulado */
+    --gradient-blue: linear-gradient(135deg, #0B43A4, #00C2FF); /* Gradiente para elementos especiales */
+    --overlay-dark: rgba(10, 25, 41, 0.85); /* Overlay para modales/cards */
 }
 
 body {
-    font-family: "Noto Serif", serif;;
-    background-color: var(--dark);
+    font-family: cursive;
+    background-color: #0A1929; /* Azul oscuro profundo */
+    color: var(--light-text);
     margin: 0;
     padding: 0;
 }

@@ -5,17 +5,18 @@
     position: fixed;
     right: 0;
     z-index: 10;
-    background-color: var(--dark);
-    border: 2px solid var(--light-blue);
+    background-color: var(--dark-bg); /* Cambiado a azul oscuro para fondos */
+    border: 2px solid var(--accent-blue); /* Cambiado a azul brillante */
     box-sizing: border-box;
-    box-shadow: 2px 4px 10px var(--light-blue);
+    box-shadow: 2px 4px 10px var(--neon-blue); /* Cambiado a azul neón */
     display: flex;
     flex-direction: column;
     padding: 48px 24px;
-    color: var(--white);
+    color: var(--light-text); /* Cambiado a texto claro */
     justify-content: center;
     align-items: center;
 }
+
 .detail {
     display: flex;
     justify-content: space-between;
@@ -23,38 +24,53 @@
     height: 10%;
     width: 100%;
 }
+
 .detail svg {
     width: 32px;
     height: 32px;
+    color: var(--light-text); /* Añadido color del ícono */
 }
+
 .detail svg:hover {
     cursor: pointer;
+    color: var(--neon-blue); /* Añadido efecto hover */
 }
+
 .video_image {
     width: 100%;
     height: 25%;
     margin: 0;
     padding-top: 24px;
 }
+
 .video_image img {
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     width: 100%;
     height: 100%;
+    border-radius: 8px; /* Añadido borde redondeado */
 }
+
 .video_description {
     margin-top: 24px;
     height: 60%;
     padding-top: 24px;
 }
+
 .watch_video {
     width: 250px;
-    background-color: var(--light-blue);
+    background: var(--gradient-blue); /* Usando el gradiente para el botón */
     border-radius: 10px;
     padding: 8px 16px;
-    color: var(--white);
+    color: var(--light-text); /* Cambiado a texto claro */
     font-weight: 600;
     font-size: medium;
+    border: none; /* Añadido para limpiar bordes por defecto */
+    transition: transform 0.2s ease; /* Añadido para animación suave */
 }
+
 .watch_video:hover {
     cursor: pointer;
+    transform: scale(1.05); /* Añadido efecto de escala al hover */
+    box-shadow: 0 0 15px var(--neon-blue); /* Añadido efecto de brillo al hover */
 }

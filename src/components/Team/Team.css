@@ -7,14 +7,16 @@
 }
 
 .team h2 {
-    color: var(--white);
-    background-color: var(--light-blue);
+    color: var(--light-text); /* Cambiado a texto claro */
+    background: var(--gradient-blue); /* Usando el gradiente para el título */
     width: 250px;
     text-align: center;
     border-radius: 10px;
     padding: 8px 16px;
     margin-bottom: 24px;
+    box-shadow: 0 2px 8px var(--neon-blue); /* Añadido efecto de sombra neón */
 }
+
 .cards_container {
     display: flex;
     flex-wrap: wrap;
